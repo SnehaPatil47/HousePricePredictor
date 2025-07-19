@@ -3,13 +3,13 @@ import pickle as pk
 import streamlit as st
 
 # Load the trained model using raw string to avoid backslash issues
-model = pk.load(open(r'C:\Users\DELL\Desktop\houseprediction\House_Price_Prediction_model.pk1', 'rb'))
+model = pk.load(open(r'House_Price_Prediction_model.pk1', 'rb'))
 
 # Set the header of the web app
 st.header('🏠 Banglore House Prices Predictor')
 
 # Load the cleaned dataset
-data = pd.read_csv(r'C:\Users\DELL\Desktop\houseprediction\Cleaned_data.csv')
+data = pd.read_csv(r'Cleaned_data.csv')
 
 # UI Inputs
 loc = st.selectbox('📍 Choose the location', data['location'].unique())
